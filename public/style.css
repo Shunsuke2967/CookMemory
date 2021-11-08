@@ -152,7 +152,7 @@ table{
 
 
 .detail-img img{
-  /* width: 100%; */
+  width: 75vw;
   height: 100%;
   /* object-fit: cover; */
 }
