@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>CookRecipe_form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="home-content"><a href= "/">CookRecipe</a></h1>
+        <div class="nav-bar"><a href= "/">HOME</a></div>
+      </div>
+      <h2>投稿画面</h2>
+
+      <% if @nilimgfile %>
+        <div class="nilimgfile"><%= @nilimgfile %></div>
+      <% end %>
+
+      <form action="/contentsave/<%= @account_id %>" method="post" enctype="multipart/form-data">
+        <table>
+          <tr><th><label for="input_title">タイトル</label></th></tr>
+          <tr><td><div class="edit"><input id="input_title" type="text" name="title" value= "<%= @title %>"></div><td><tr>
+        </table>
+        <div class="content-detail">
+          <label for="input_content">投稿内容</label>
+          <div class="edit"><textarea id="input_content" name="content" rows="4" cols="40"><%= @content %></textarea></div>
+
+          <label for="input_content_img"></label>
+          <input type="file" id="input_content_img" name="imgfile" accept=".png, .jpg, .jpeg, .pdf, .doc">
+
+          <div class="edit-form-buttom">
+            <button type="submit">投稿する</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

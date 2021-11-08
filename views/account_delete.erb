@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>CookRecipe_account_delete</title>
+  </head>
+  <body>
+    <h1><%= @account.name %>さんのアカウントを削除しますか？</h1>
+    <form action="/account_deleted/<%= @account.id %>" method="post">
+      <input type="submit" value="削除を実行">
+    </form>
+    <a href= "/">ホームに戻る</a>
+  </body>
+</html>

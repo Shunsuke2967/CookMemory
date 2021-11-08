@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>CookRecipe_edit</title>
+  </head>
+  <body>
+    <div class="wrapper header">
+      <h1 class="home-content"><a href= "/">CookRecipe</a></h1>
+      <div class="nav-bar">
+        <a href= "/">HOME</a>
+        <a href= "/account/<%= @content.account_id %>">前の画面</a>
+      </div>
+    </div>
+
+    <div class="bg">
+    </div>
+    
+    <div class="wrapper">
+      <h2>編集画面</h2>
+      <form method = post action="/edited/<%= @content.id %>" enctype="multipart/form-data">
+        <div class="table_content">
+          <table>
+            <% if @content.title.present? %>
+              <tr><th class="edit"><input type="text" value="<%= @content.title %>" name="title"></th></tr>
+            <% else %>
+              <tr><th class="edit"><input type="text" value="タイトルがありません" name="title"></th></tr>
+            <% end %>
+            <% r = Random.new %>
+            <% salt = Digest::SHA256.hexdigest(r.bytes(20)) %>
+            <tr><td><img src="/img/<%= @content.imgfile %>?<%= salt %>"/></td></tr>
+            <tr>
+              <td>
+                <div>変更する場合は画像を選択してください</div>
+                <input type="file" name="imgfile" accept=".png, .jpg, .jpeg, .pdf, .doc">
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="content-detail">
+          <textarea id="input_content" name="content" rows="6" cols="60"><%= @content.post_content %></textarea>
+        </div>
+        <div class="edit-form-buttom">
+          <button type="submit">編集する</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

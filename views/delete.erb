@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>CookRecipe_delete</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>この投稿を本当に削除しますか？</h1>
+      <div class="table_content">
+        <table>
+          <% if @content.title.present? %>
+            <tr><th><%= @content.title %></th></tr>
+          <% else %>
+            <tr><th>タイトルがありません</th></tr>
+          <% end %>
+          <% r = Random.new %>
+          <% salt = Digest::SHA256.hexdigest(r.bytes(20)) %>
+          <tr><td><img src="/img/<%= @content.imgfile %>?<%= salt %>"/></td></tr>
+          <tr><td><%= @content.post_content %></td></tr>
+        </table>
+      </div>
+      <form method="post" action="/delete/<%= @content.id %>">
+        <button type="submit">削除を実行する</button>
+      </form>
+      <a href= "/">ホームに戻る</a>
+    </div>
+  </body>
+</html>

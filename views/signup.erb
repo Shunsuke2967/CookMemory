@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>CookRecipe_signup</title>
+  </head>
+  <body>
+    <div class="wrapper header">
+      <h1 class="home-content"><a href= "/">CookRecipe</a></h1>
+      <div class="nav-bar">
+        <a href= "/">HOME</a>
+        <a href= "/login">Login</a>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h2>Signup</h2>
+
+      <div class="passmiss"><%= @signupmiss if @signupmiss%></div>
+
+      <div class="signup-login">
+        <form action="/signup" method="post">
+          <label for="input_name">名前 </label><br>
+          <input id="input_name" type="text" name="name" value="<%= @name %>"><br>
+          <label for="input_pass">パスワード </label><br>
+          <input id="input_pass" type="password" name="password"><br>
+          <label for="input_re_pass">パスワード確認用 </label><br>
+          <input id="input_re_pass" type="password" name="confirmation"><br>
+          <div class="signup-login-button"><button type="submit">signup</button></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
