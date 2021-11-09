@@ -168,7 +168,7 @@ table{
 
 .detail-img{
   /* width: 100vh; */
-  height: 39vh;
+  height: 40vh;
 }
 
 #input_content{
@@ -254,6 +254,10 @@ input[type="password"]:hover {
 }
 
 @media (max-width: 600px){
+
+  .wrapper{
+    padding: 0 2%;
+  }
 
   /* ナビバーの大きさと間隔 */
   .nav-bar a{
