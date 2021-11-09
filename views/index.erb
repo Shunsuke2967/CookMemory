@@ -3,6 +3,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title>CookRecipe</title>
   </head>
   <body>
@@ -14,7 +17,7 @@
           <a href= "/login">Login</a>
         <% else %>
           <a href= "/contentform/<%= @login_account.id %>">投稿</a>
-          <a href= "/account/<%= @login_account.id %>"><%= @account_name %></a>
+          <a href= "/account/<%= @login_account.id %>"><%= @login_account.nickname %></a>
           <a href= "/logout">Logout</a>
         <% end %>
       </div>

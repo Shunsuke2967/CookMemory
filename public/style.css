@@ -203,7 +203,10 @@ margin: auto;
   text-align: center;
 }
 
-#input_name,#input_pass,#input_re_pass{
+#input_name,
+#input_pass,
+#input_re_pass,
+#input_nickname{
   margin-bottom: 15px;
   width: 100%;
 }
@@ -234,4 +237,60 @@ input[type="password"]:hover {
 
 .detail-button{
   text-align: end;
+}
+
+@media (max-width: 600px){
+
+  /* ナビバーの大きさと間隔 */
+  .nav-bar a{
+    font-size: 21px;
+    margin-left: 0;
+  }
+
+  .nav-bar{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* 画像の大きさ */
+  .bg{
+    background-size: cover;
+    background-image: url(./img/cafe.jpg);
+    min-height: 30vh;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* 入力フォームおおきさ */
+
+  input{
+    width: 70%;
+  }
+
+  /* 画像フォルダの選択 */
+
+  #input_content_img{
+    width: 85%;
+  }
+
+  /* ヘッダーの部分 */
+
+  .home-content{
+    text-align: center;
+  }
+
+  /* flexを解除 */
+  .header{
+    display: block;
+  }
+
+  /* 詳細画面の画像を大きくしている */
+  .detail-img img {
+    width: 80vw;
+    height: 100%;
+}
+
 }

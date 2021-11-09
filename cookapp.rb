@@ -7,6 +7,7 @@ require 'will_paginate/active_record'
 Bundler.require
 
 #データベースの設定 データベースの使用する種類と使うデータベースファイル名を記述
+set :database,{adapter: "sqlite3",database: "cookapp.sqlite3"}
 
 enable :sessions
 
@@ -18,7 +19,8 @@ WillPaginate::ViewHelpers.pagination_options[:next_label] = '次へ &gt'
 class Account < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :hashed
-  validates :name, uniqueness: true
+  validates :name, uniqueness: true,
+                   length: { maximum: 6 }
   has_many :contents, dependent: :destroy
 end
 
@@ -28,7 +30,7 @@ end
 
 #ホームページ
 get '/' do
-  if @account_name = session[:user_name]
+  if session[:user_name].present?
     @login_account = Account.find_by(name: session[:user_name])
   end
   #will_pagenateで全件取得してデータの表示数を指定している
@@ -48,8 +50,9 @@ end
 #サインアップ画面の表示
 get '/signup' do
   @signupmiss = session.delete :signupmiss
-
-  @name = session.delete :name
+  @namemiss = session.delete :namemiss
+  @nickname = session.delete :nickname
+  @name_length_miss = session.delete :name_length_miss
   erb :signup
 end
 
@@ -58,31 +61,37 @@ post '/signup' do
   @username = params[:name]
   password = params[:password]
   confirmation = params[:confirmation]
+  nickname = params[:nickname]
   
-  if @username.present? && password.present? && confirmation.present?
+  
+  if @username.present? && password.present? && confirmation.present? && nickname.present?
     if password == confirmation
-      # begin
       r = Random.new
       salt = Digest::SHA256.hexdigest(r.bytes(20))
       hashed = Digest::SHA256.hexdigest(password + salt)
-      account = Account.new({ name: @username, hashed: hashed, salt: salt })
+      account = Account.new({ name: @username, hashed: hashed, salt: salt ,nickname: nickname})
 
       if account.save
         session[:user_name] = @username
         redirect '/'
       else 
-        session[:signupmiss] = "その名前は使えません別の名前にしてください"
+        session[:namemiss] = @username
+        session[:nickname] = nickname
+        session[:signupmiss] = "その名前は使えません別の名前にしてください" if Account.find_by(name: @username).present?
+        session[:name_length_miss] = " ニックネームは６文字以内にしてください" if nickname.length > 6
         redirect '/signup'
       end
 
     else
       session[:signupmiss] = "パスワードを間違えています"
-      session[:name] = @username
+      session[:namemiss] = @username
+      session[:nickname] = nickname
       redirect '/signup'
     end
   else
     session[:signupmiss] = "すべて入力してください"
-    session[:name] = @username
+    session[:namemiss] = @username
+    session[:nickname] = nickname
     redirect '/signup'
   end
 end

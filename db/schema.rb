@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_085421) do
+ActiveRecord::Schema.define(version: 2021_11_09_012247) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name", null: false
     t.string "hashed", null: false
     t.string "salt", null: false
+    t.string "nickname"
     t.index ["name"], name: "index_accounts_on_name", unique: true
   end
 
