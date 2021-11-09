@@ -166,7 +166,7 @@ table{
 /* 投稿詳細画面 */
 
 
-.detail-img img{
+.detail-img{
   width: 58vw;
   height: 100%;
   /* object-fit: cover; */
