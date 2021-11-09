@@ -167,8 +167,8 @@ table{
 
 
 .detail-img{
-  width: auto;
-  height: 60vh;
+  width: 100vh;
+  /* height: 60vh; */
 }
 
 #input_content{
