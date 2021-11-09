@@ -28,7 +28,7 @@
         <% end %>
         <% r = Random.new %>
         <% salt = Digest::SHA256.hexdigest(r.bytes(20)) %>
-        <tr><td class="detail-img"><img src="/img/<%= @content.imgfile %>?<%= salt %>"/></td></tr>
+        <tr><td><a href="/detail_content/<%= @content.id %>"><img src="/img/<%= @content.imgfile %>?<%= salt %>"/></a></td></tr>
         <tr><td><div><%= @account.nickname %>の投稿</div></td></tr>
         <tr><th>作り方</th></tr>
       </table>
