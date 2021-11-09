@@ -7,10 +7,19 @@
     <title>CookRecipe_account_delete</title>
   </head>
   <body>
-    <h1><%= @account.name %>さんのアカウントを削除しますか？</h1>
-    <form action="/account_deleted/<%= @account.id %>" method="post">
-      <input type="submit" value="削除を実行">
-    </form>
-    <a href= "/">ホームに戻る</a>
+    <div class="wrapper header">
+      <h1 class="home-content"><a href= "/">CookRecipe</a></h1>
+      <div class="nav-bar">
+        <a href= "/">HOME</a>
+      </div>
+    </div>
+    <h2>＜名前：<%= @account.name %>＞</h2>
+    <h2>＜ニックネーム：<%= @account.nickname %>＞</h2>
+    <h2>本当に削除しますか？</h2>
+    <div class="delete-button">
+      <form action="/account_deleted/<%= @account.id %>" method="post">
+        <button type="submit">削除を実行する</button>
+      </form>
+    </div>
   </body>
 </html>

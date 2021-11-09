@@ -25,14 +25,13 @@
 
     <div class="bg">
     </div>
-
     <form method ="get" action = "/search">
       <div class="search">
         <input type = "text" name = "search" placeholder = "なにかお探しですか？">
         <button type="submit">検索</button>
       </div>
     </form>
-    <div class="table-content">
+    <div class="table-content wrapper">
       <% @contents.each do |content| %>
         <% account = Account.find(content.account_id) %>
         <table>
@@ -44,7 +43,7 @@
           <% r = Random.new %>
           <% salt = Digest::SHA256.hexdigest(r.bytes(20)) %>
           <tr><td><a href="/detail_content/<%= content.id %>"><img src="/img/<%= content.imgfile %>?<%= salt %>"/></a></td></tr>
-          <tr><td><a href="/detail_account/<%= content.account_id %>"><%= account.name %>の投稿</a></td></tr>
+          <tr><td><a href="/detail_account/<%= content.account_id %>"><%= account.nickname %>の投稿</a></td></tr>
         </table>
       <% end %>
     </div>

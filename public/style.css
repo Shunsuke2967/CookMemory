@@ -29,8 +29,9 @@ a:hover{
 }
 
 img{
-  width: 300px;
-  height: 300px;
+  max-width: 100%;
+  width: 90vw;
+  height: 50vh;
   object-fit: cover;
 }
 
@@ -78,6 +79,7 @@ input[type="text"]:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  max-width: 100%;
 }
 
 
@@ -146,6 +148,19 @@ table{
 .button-item{
   margin-left: 5px;
   margin-right: 3px;
+}
+
+.account_name{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+/* 消去部分 */
+
+.delete-button{
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* 投稿詳細画面 */
@@ -291,6 +306,15 @@ input[type="password"]:hover {
   .detail-img img {
     width: 80vw;
     height: 100%;
+}
+
+/* コンテンツの消去画面 */
+.delete-h2{
+  font-size: 15px;
+}
+
+.account_name{
+  font-size: 17px;
 }
 
 }
