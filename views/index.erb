@@ -25,7 +25,6 @@
 
     <div class="bg">
     </div>
-    <div class="color">
     <form method ="get" action = "/search">
       <div class="search">
         <input type = "text" name = "search" placeholder = "思い出を探す">
@@ -51,6 +50,5 @@
 
     <%#will_paginateのテンプレートを記述 %>
     <%= will_paginate @contents, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
-    </div>
   </body>
 </html>
