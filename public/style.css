@@ -284,6 +284,12 @@ input[type="password"]:hover {
   padding: 15px 0;
 }
 
+.absiti{
+  position: absolute;
+  bottom: 0;
+  
+}
+
 @media (max-width: 600px){
 
   .wrapper{
