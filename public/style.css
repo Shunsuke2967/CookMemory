@@ -68,7 +68,7 @@ input[type="text"]:hover {
 .pagination,.pagination a{
   color: white;
   text-align: center;
-  font-size: 22px;
+  font-size: 14px;
 }
 
 .pagination a:hover{
