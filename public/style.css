@@ -146,6 +146,7 @@ table{
   display: flex;
   justify-content:end;
   align-items:  flex-start;
+  display: -webkit-box;
 }
 
 .button-item{
