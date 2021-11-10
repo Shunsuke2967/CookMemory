@@ -30,8 +30,8 @@ a:hover{
 
 img{
   max-width: 100%;
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -167,15 +167,14 @@ table{
 
 /* 投稿詳細画面 */
 
-.detail-content{
+.detail-img{
   margin: auto;
   max-width: 70%;
-
 }
 
 .detail-content img{
   max-width: 100%;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
 }
 
