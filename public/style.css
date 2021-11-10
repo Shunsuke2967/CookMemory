@@ -62,7 +62,7 @@ input[type="text"]:hover {
 .wrapper{
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 0 2%;
 }
 
 .pagination,.pagination a{
