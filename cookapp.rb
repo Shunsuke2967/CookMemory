@@ -185,7 +185,7 @@ end
 get '/account/:id' do
   redirect '/' if session[:user_name] == nil
   @account = Account.find(params[:id])
-  @contents = Content.where(account_id: params[:id])
+  @contents = Content.where(account_id: params[:id]).paginate(page: params[:page], per_page: 6)
   erb :account
 end
 
