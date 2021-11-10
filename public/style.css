@@ -65,12 +65,15 @@ input[type="text"]:hover {
   padding: 0 4%;
 }
 
-.pagination{
+.pagination,.pagination a{
   color: white;
   text-align: center;
   font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+}
+
+.pagination a:hover{
+  -webkit-text-stroke: 1px rgb(10, 10, 10);
+  text-stroke: 1px rgb(10, 10, 10);
 }
 
 /* ヘッダー */
