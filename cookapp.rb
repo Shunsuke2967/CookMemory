@@ -7,7 +7,7 @@ require 'will_paginate/active_record'
 Bundler.require
 
 #データベースの設定 データベースの使用する種類と使うデータベースファイル名を記述
-set :database,{adapter: "sqlite3",database: "cookapp.sqlite3"}
+# set :database,{adapter: "sqlite3",database: "cookapp.sqlite3"}
 
 enable :sessions
 
