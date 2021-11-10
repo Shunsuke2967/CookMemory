@@ -118,7 +118,7 @@ input[type="text"]:hover {
 .search{
   text-align: center;
   margin-bottom: 15px;
-  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .search button,button[type="submit"]{
@@ -297,7 +297,7 @@ input[type="password"]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    padding-top: 20px;
   }
 
   /* 入力フォームおおきさ */
