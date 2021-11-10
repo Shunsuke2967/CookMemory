@@ -273,6 +273,12 @@ input[type="password"]:hover {
   text-align: end;
 }
 
+/* フッター */
+
+.futaer{
+  background-color:rgb(179, 143, 108);
+}
+
 @media (max-width: 600px){
 
   .wrapper{
