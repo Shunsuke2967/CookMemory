@@ -35,6 +35,29 @@ img{
   object-fit: cover;
 }
 
+table{
+  text-align: center;
+  margin-bottom: 20px;
+  margin: auto;
+  max-width: 300px;
+}
+
+input{
+  border: 1px solid rgb(241, 224, 193);
+  border-radius: 0.4em;
+  background-color: snow;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #e4ae19;
+  outline: 0;
+}
+
+input[type="text"]:hover {
+  border: 1px solid #e4ae19;
+  outline: 0;
+}
+
 .wrapper{
   max-width: 1400px;
   margin: 0 auto;
@@ -46,16 +69,6 @@ img{
   font-size: 22px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-input[type="text"]:focus {
-  border: 1px solid #e4ae19;
-  outline: 0;
-}
-
-input[type="text"]:hover {
-  border: 1px solid #e4ae19;
-  outline: 0;
 }
 
 /* ヘッダー */
@@ -117,22 +130,13 @@ input[type="text"]:hover {
   background: #f56500;
 }
 
-input{
-  border: 1px solid rgb(241, 224, 193);
-  border-radius: 0.4em;
-  background-color: snow;
-}
-
 /* 投稿一覧の部分 */
-
-table{
-  margin: auto;
-  max-width: 300px;
-}
 
 table{
   text-align: center;
   margin-bottom: 20px;
+  margin: auto;
+  max-width: 300px;
 }
 
 .table-content{
@@ -169,30 +173,17 @@ table{
 
 /* 投稿詳細画面 */
 
-/* .detail-img{
-  margin: auto;
-  max-width: 70%;
-} */
+.detail-table{
+  max-width: none;
+  width: 50%;
+}
 
-.detail-content img{
+.detail-tabk img{
   max-width: 100%;
   width: 100%;
   object-fit: cover;
   height: initial;
 }
-
-
-.detail-content{
-  max-width: none;
-  width: 50%;
-}
-
-
-/* .detail-img{
-  width: 100vh;
-  height: 40vh;
-} */
-
 
 #input_content{
   width: 100%;
@@ -329,12 +320,7 @@ input[type="password"]:hover {
   }
 
   /* 詳細画面の画像を大きくしている */
-  /* .detail-img img {
-    width: 80vw;
-    height: 100%;
-} */
-
-.detail-content{
+.detail-table{
   max-width: none;
   width: 70%;
 }
@@ -345,6 +331,7 @@ input[type="password"]:hover {
   font-size: 15px;
 }
 
+アカウントの名前
 .account_name{
   font-size: 17px;
 }
