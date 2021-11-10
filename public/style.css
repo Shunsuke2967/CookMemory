@@ -277,6 +277,7 @@ input[type="password"]:hover {
 
 .futaer{
   background-color:rgb(179, 143, 108);
+  padding: 0 30px;
 }
 
 @media (max-width: 600px){
