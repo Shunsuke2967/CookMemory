@@ -167,6 +167,18 @@ table{
 
 /* 投稿詳細画面 */
 
+.detail-content{
+  margin: auto;
+  max-width: 70%;
+
+}
+
+.detail-content img{
+  max-width: 100%;
+  width: 100vw;
+  object-fit: cover;
+}
+
 
 /* .detail-img{
   width: 100vh;
