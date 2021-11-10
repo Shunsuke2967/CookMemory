@@ -147,6 +147,7 @@ table{
   justify-content:flex-end;
   align-items:  flex-end;
   display: -webkit-box;
+  display: -webkit-end;
 }
 
 .button-item{
