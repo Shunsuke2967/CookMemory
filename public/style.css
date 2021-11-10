@@ -12,6 +12,10 @@ body{
   background-color: hsl(30, 22%, 96%);
 }
 
+.color{
+  background-color:  hsl(29, 51%, 78%);
+}
+
 h2{
   text-align: center;
   margin-top: 15px;
