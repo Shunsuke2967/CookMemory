@@ -34,7 +34,7 @@ get '/' do
     @login_account = Account.find_by(name: session[:user_name])
   end
   #will_pagenateで全件取得してデータの表示数を指定している
-  @contents = Content.paginate(page: params[:page], per_page: 6)
+  @contents = Content.paginate(page: params[:page], per_page: 12)
   erb :index
 end
 
@@ -43,7 +43,7 @@ get '/search' do
   @search = params[:search]
   #ログインしている場合はアカウントを表示させるためインスタンスに入れている
   @login_account = Account.find_by(name: session[:user_name]) if session[:user_name]
-  @contents = Content.where('title like?',"%#{params[:search]}%").paginate(page: params[:page], per_page: 6)
+  @contents = Content.where('title like?',"%#{params[:search]}%").paginate(page: params[:page], per_page: 12)
   erb :search
 end
 
@@ -185,7 +185,7 @@ end
 get '/account/:id' do
   redirect '/' if session[:user_name] == nil
   @account = Account.find(params[:id])
-  @contents = Content.where(account_id: params[:id]).paginate(page: params[:page], per_page: 6)
+  @contents = Content.where(account_id: params[:id]).paginate(page: params[:page], per_page: 12)
   erb :account
 end
 
