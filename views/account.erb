@@ -42,16 +42,18 @@
               </td>
             </tr>
             <tr>
-              <td class="edit-button">
-                <div class="button-item">
-                  <form method = get action="/delete/<%= content.id %>">
-                    <button type="submit">削除</button>
-                  </form>
-                </div>
-                <div class="button-item">
-                  <form method = get action="/edit/<%= content.id %>">
-                    <button type="submit">編集</button>
-                  </form>
+              <td>
+                <div class="edit-button">
+                  <div class="button-item">
+                    <form method = get action="/delete/<%= content.id %>">
+                      <button type="submit">削除</button>
+                    </form>
+                  </div>
+                  <div class="button-item">
+                    <form method = get action="/edit/<%= content.id %>">
+                      <button type="submit">編集</button>
+                    </form>
+                  </div>
                 </div>
               </td>
             </tr>
