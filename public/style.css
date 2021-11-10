@@ -12,9 +12,6 @@ body{
   background-color: hsl(30, 22%, 96%);
 }
 
-.color{
-  background-color:  hsl(29, 51%, 78%);
-}
 
 h2{
   text-align: center;
@@ -84,6 +81,11 @@ input[type="text"]:hover {
 
 .nav-bar a{
   margin-left: 20px;
+  color: white;
+}
+
+.home-content a{
+  color: white;
 }
 
 /* ホームのタイトル部分と背景 */
