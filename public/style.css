@@ -182,7 +182,7 @@ table{
 
 .detail-content{
   max-width: none;
-  width: 80%;
+  width: 50%;
 }
 
 
@@ -334,7 +334,9 @@ input[type="password"]:hover {
 
 .detail-content{
   max-width: none;
+  width: 50%;
 }
+
 
 /* コンテンツの消去画面 */
 .delete-h2{
