@@ -72,8 +72,8 @@ input[type="text"]:hover {
 }
 
 .pagination a:hover{
-  -webkit-text-stroke: 1px rgb(10, 10, 10);
-  text-stroke: 1px rgb(10, 10, 10);
+  -webkit-text-stroke: 1px rgb(210, 248, 104);
+  text-stroke: 1px rgb(210, 248, 104);
 }
 
 /* ヘッダー */
