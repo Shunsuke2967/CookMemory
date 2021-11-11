@@ -1,9 +1,5 @@
 # CookMemory
-*CookRecipeの内容をUbuntu環境で改善してweb上で公開しました*
-
-公開しているwebアプリ↓<br>
-[CookMemory](https://fathomless-lowlands-07942.herokuapp.com/)
-
+*CookRecipeの内容をUbuntu環境で改善してweb上で公開しました
 もとにしたコード↓<br>
 https://github.com/Shunsuke2967/CookRecipe
 <br>
@@ -30,8 +26,5 @@ https://github.com/Shunsuke2967/CookRecipe
 
 最初のアプリの設計とデータベースの設計がいかに大切かがわかりました<br>
 今回のコードの書き方だと後から見返したり修正したりがかなり難しくなった<br>
-
-
-
 
 
