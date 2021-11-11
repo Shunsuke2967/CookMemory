@@ -1,0 +1,2 @@
+# CookMemory
+CookRecipeの内容をUbuntu環境で改善してweb上で公開しました
