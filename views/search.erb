@@ -8,17 +8,19 @@
     <title>CookMemory_search</title>
   </head>
   <body>
-    <div class="wrapper header">
-      <h1 class="home-content"><a href= "/">CookMemory</a></h1>
-      <div class="nav-bar">
-        <% unless @login_account %>
-          <a href= "/signup">Signup</a>
-          <a href= "/login">Login</a>
-        <% else %>
-          <a href= "/contentform/<%= @login_account.id %>">投稿</a>
-          <a href= "/account/<%= @login_account.id %>"><%= @account_name %></a>
-          <a href= "/logout">Logout</a>
-        <% end %>
+    <div class="backcolor">
+      <div class="wrapper header">
+        <h1 class="home-content"><a href= "/">CookMemory</a></h1>
+        <div class="nav-bar">
+          <% unless @login_account %>
+            <a href= "/signup">Signup</a>
+            <a href= "/login">Login</a>
+          <% else %>
+            <a href= "/contentform/<%= @login_account.id %>">投稿</a>
+            <a href= "/account/<%= @login_account.id %>"><%= @account_name %></a>
+            <a href= "/logout">Logout</a>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="bg">

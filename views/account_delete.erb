@@ -7,10 +7,12 @@
     <title>CookMemory_account_delete</title>
   </head>
   <body>
-    <div class="wrapper header">
-      <h1 class="home-content"><a href= "/">CookMemory</a></h1>
-      <div class="nav-bar">
-        <a href= "/">HOME</a>
+    <div class="backcolor">
+      <div class="wrapper header">
+        <h1 class="home-content"><a href= "/">CookMemory</a></h1>
+        <div class="nav-bar">
+          <a href= "/">HOME</a>
+        </div>
       </div>
     </div>
     <h2>＜名前：<%= @account.name %>＞</h2>
@@ -20,6 +22,8 @@
       <form action="/account_deleted/<%= @account.id %>" method="post">
         <button type="submit">削除を実行する</button>
       </form>
+    </div>
+    <div class="futaer">
     </div>
   </body>
 </html>
