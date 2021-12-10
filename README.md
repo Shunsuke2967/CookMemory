@@ -7,6 +7,7 @@
 <br>
 <br>
 # 使用技術
+- WSL2(開発環境)
 - Ruby 2.7.5
 - sinatra 2.1.0
 - webrick 1.7
