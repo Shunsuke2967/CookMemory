@@ -3,7 +3,7 @@
 投稿機能はログインしているユーザーのみ使えるようにしています。<br>
 投稿した内容はほかのユーザーと共有できます<br>
 レスポンシブ対応なのでスマホからでも確認できます。<br>
-<img width="960" alt="スクリーンショット 2021-12-11 192809" src="https://user-images.githubusercontent.com/88970298/145673371-420e311b-c077-426e-ad9d-b684e8fc4fc2.png">
+<img width="960" alt="スクリーンショット 2021-12-11 192809" src="https://user-images.githubusercontent.com/88970298/145673371-420e311b-c077-426e-ad9d-b684e8fc4fc2.png"><br>
 <現在>herokuにて不具合がでたので取り下げています。
 <br>
 <br>
